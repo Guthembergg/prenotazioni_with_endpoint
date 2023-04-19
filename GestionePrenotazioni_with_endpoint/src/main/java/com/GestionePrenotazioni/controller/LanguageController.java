@@ -35,7 +35,7 @@ public class LanguageController {
 	}
 
 	@GetMapping("/{test}")
-	public String getHomePagePathParam(@PathVariable String test){
+	public @ResponseBody String getHomePagePathParam(@PathVariable String test){
 		// http://localhost:8080/homepage/param/ciao
 		if (test.equals("english")) {
 			return "The reservation is valid for one day only and can be made only if the station is free for that day. A user can search for stations by indicating the type of station desired and the city of interest. A user can have multiple reservations in progress, but cannot reserve more than one seat for a particular date. ";
